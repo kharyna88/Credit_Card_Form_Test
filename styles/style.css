@@ -1,0 +1,375 @@
+@font-face {
+  font-family: 'PTSans';
+  src: url("/fonts/PTSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url("/fonts/PTSans-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url("/fonts/PTSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url("/fonts/") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', serif;
+}
+
+.block-center, .white-center, .credit-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.back-blue {
+  height: 350px;
+  width: 700px;
+  -webkit-transform: skewY(-17deg);
+          transform: skewY(-17deg);
+  background: linear-gradient(197deg, transparent 14px, #0c85fb 0) right, linear-gradient(-343deg, transparent 14px, #0c85fb 0) left;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+.white-center {
+  -webkit-transform: translate(-50%, -58%);
+          transform: translate(-50%, -58%);
+}
+
+.white-center .content {
+  background: white;
+  height: 300px;
+  width: 440px;
+  -webkit-transform: skewY(17deg);
+          transform: skewY(17deg);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.pay-list {
+  Display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 300px;
+  width: 203px;
+}
+
+.pay-list .total {
+  margin-top: 65px;
+  letter-spacing: 2px;
+}
+
+.pay-list .total h4 {
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+}
+
+.pay-list .total p {
+  color: #0c85fb;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.pay-list .detail {
+  margin-top: 18px;
+}
+
+.pay-list .detail h4 {
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+}
+
+.pay-list .detail .items {
+  width: 135px;
+  height: 40px;
+  margin-top: 10px;
+  Display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pay-list .detail .items div {
+  Display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.pay-list .detail .items div p {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.pay-list .detail .items div span {
+  color: #0c85fb;
+  font-weight: bold;
+}
+
+.pay-list button {
+  margin-top: 30px;
+  outline: none;
+  height: 32px;
+  text-align: center;
+  width: 124px;
+  border-radius: 40px;
+  background: #fff;
+  border: 1px solid #0c85fb;
+  color: #0c85fb;
+  text-shadow: 0;
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.pay-list button:hover {
+  color: white;
+  background: #0c85fb;
+}
+
+.credit-card {
+  background: #1a8bff;
+  height: 180px;
+  width: 320px;
+  -webkit-transform: translate(-5%, -50%);
+          transform: translate(-5%, -50%);
+  border-radius: 12px;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.credit-card .section-1 {
+  Display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.credit-card .section-1 div {
+  margin: 16px 0 0 30px;
+}
+
+.credit-card .section-1 div span {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.credit-card .section-1 .logo {
+  display: block;
+  background-image: url(../images/visa-logo.png);
+  white-space: nowrap;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 35px;
+  background-size: 100%;
+  margin: 16px 19px 0 0;
+}
+
+.credit-card .section-2 {
+  margin-left: 30px;
+}
+
+.credit-card .section-2 .numbers {
+  height: 23px;
+  width: 216px;
+  background: #3898fc;
+  margin-top: 3px;
+}
+
+.credit-card .section-2 label {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: normal;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.747);
+}
+
+.credit-card .section-3 {
+  Display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 20px;
+}
+
+.credit-card .section-3 .month {
+  Display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.credit-card .section-3 .month label {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: normal;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.747);
+}
+
+.credit-card .section-3 .month .selects {
+  width: 155px;
+  background-color: #3898fc;
+  margin-top: 3px;
+}
+
+.credit-card .section-3 .month .year {
+  width: 67px;
+}
+
+.credit-card .section-3 .month select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  background-color: #3898fc;
+  border: none;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 2px 2px 2px 9px;
+  outline: none !important;
+}
+
+.credit-card .section-3 .month select::-webkit-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.credit-card .section-3 .month select:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.credit-card .section-3 .month select::-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.credit-card .section-3 .month select::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.credit-card .cvv {
+  Display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.credit-card .cvv label {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: normal;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.747);
+}
+
+.input {
+  width: 40px;
+  background-color: #3898fc;
+  border: none;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 2px 2px 2px 9px;
+  outline: none !important;
+}
+
+.input::-webkit-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.input:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.input::-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.input::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+input[data-rule].valid {
+  background-color: green;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+input[data-rule].invalid {
+  background-color: red;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+/*# sourceMappingURL=style.css.map */

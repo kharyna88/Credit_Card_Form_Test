@@ -1,0 +1,172 @@
+@import 'fonts';
+@import 'extend';
+@import 'mixin';
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.block-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.back-blue {
+    height: 350px;
+    width: 700px;
+    transform: skewY(-17deg);
+    background: linear-gradient(197deg, transparent 14px, $color-blue 0) right, linear-gradient(-343deg, transparent 14px, $color-blue 0) left;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+.white-center {
+    @extend .block-center;
+    transform: translate(-50%, -58%);
+    .content {
+        background: white;
+        height: 300px;
+        width: 440px;
+        transform: skewY(17deg);
+        border-radius: 6px;
+        box-shadow: $shadow;
+    }
+}
+
+.pay-list {
+    @include flex-column;
+    justify-content: start;
+    align-items: center;
+    height: 300px;
+    width: 203px;
+    .total {
+        margin-top: 65px;
+        letter-spacing: 2px;
+        h4 {
+            @include h4;
+        }
+        p {
+            color: $color-blue;
+            font-size: 26px;
+            font-weight: bold;
+            padding-top: 4px;
+        }
+    }
+    .detail {
+        margin-top: 18px;
+        h4 {
+            @include h4;
+        }
+        .items {
+            width: 135px;
+            height: 40px;
+            margin-top: 10px;
+            font-size: 14px;
+            @include flex-column;
+            div {
+                @include flex-row;
+                p {
+                    color: rgba(0, 0, 0, 0.7);
+                }
+                span {
+                    color: $color-blue;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    button {
+        margin-top: 30px;
+        @include button;
+        &:hover {
+            color: white;
+            background: $color-blue;
+        }
+    }
+}
+
+.credit-card {
+    background: #1a8bff;
+    height: 180px;
+    width: 320px;
+    @extend .block-center;
+    transform: translate( -5%, -50%);
+    border-radius: 12px;
+    box-shadow: $shadow;
+    .section-1 {
+        @include flex-row;
+        div {
+            margin: 16px 0 0 30px;
+            span {
+                font-family: 'PT Sans', sans-serif;
+                font-weight: bold;
+                color: white;
+            }
+        }
+        .logo {
+            @include logo;
+            margin: 16px 19px 0 0;
+        }
+    }
+    .section-2 {
+        .numbers {
+            height: 23px;
+            width: 218px;
+            background: $card-color;
+            margin-top: 3px;
+        }
+        margin-left: 30px;
+        label {
+            @include text;
+        }
+    }
+    .section-3 {
+        @include flex-row;
+        justify-content: space-around;
+        margin-top: 20px;
+        .month {
+            @include flex-column;
+            label {
+                @include text;
+            }
+            .selects {
+                width: 155px;
+                background-color: $card-color;
+                margin-top: 3px;
+            }
+            .year {
+                width: 67px;
+            }
+            select {
+                appearance: none;
+                cursor: pointer;
+                @include input;
+            }
+        }
+    }
+    .cvv {
+        @include flex-column;
+        label {
+            @include text;
+        }
+    }
+}
+
+.input {
+    width: 40px;
+    @include input;
+}
+
+input[data-rule].valid {
+    background-color: green;
+    transition: 1s;
+}
+
+input[data-rule].invalid {
+    background-color: red;
+    transition: 1s;
+}
